@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fart Simulator 3000</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: radial-gradient(circle at top, #1a1a2e, #000);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 500px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#display {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #00ffcc;
+  min-height: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>💨 Fart Simulator 3000</h1>
+  <div class="subtitle">Press a button to unleash chaos</div>
+
+  <div class="grid">
+
+    <button onclick="play('Wet Fart 💦')">💦 Wet Fart</button>
+    <button onclick="play('Atomic Fart ☢️')">☢️ Atomic Fart</button>
+    <button onclick="play('Silent but Deadly 🤫')">🤫 Silent</button>
+    <button onclick="play('Mega Blast 💥')">💥 Mega Blast</button>
+    <button onclick="play('Tornado Fart 🌪️')">🌪️ Tornado</button>
+    <button onclick="play('Bubble Fart 🫧')">🫧 Bubble</button>
+    <button onclick="play('Machine Gun Fart 🔫')">🔫 Machine Gun</button>
+    <button onclick="play('Dolphin Fart 🐬')">🐬 Dolphin</button>
+    <button onclick="play('Dragon Fart 🐉')">🐉 Dragon</button>
+    <button onclick="play('Ultra Legendary Fart 👑')">👑 Legendary</button>
+
+  </div>
+
+  <div id="display"></div>
+</div>
+
+<script>
+function play(type) {
+  const display = document.getElementById("display");
+
+  display.innerHTML = "💨 Activating: " + type;
+
+  // fake vibration effect
+  document.body.style.transform = "translateX(2px)";
+  setTimeout(() => document.body.style.transform = "translateX(-2px)", 50);
+  setTimeout(() => document.body.style.transform = "translateX(0)", 100);
+}
+</script>
+
+</body>
+</html>
